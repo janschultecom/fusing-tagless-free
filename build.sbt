@@ -9,8 +9,9 @@ lazy val root = (project in file(".")).
     )),
     name := "Hello",
     libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-core" % "1.0.0-MF",
-      "org.typelevel" %% "cats-free" % "1.0.0-MF",
+      "org.typelevel" %% "cats-core" % "1.0.1",
+      "org.typelevel" %% "cats-free" % "1.0.1",
+      "org.atnos" %% "eff" % "5.0.0-RC1",
       scalaTest % Test
     )
   )

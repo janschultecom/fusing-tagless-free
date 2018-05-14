@@ -1,8 +1,8 @@
 package example
 
+import cats.implicits._
 import cats.{Monad, MonadError, ~>}
 import example.KVStore._
-import cats.implicits._
 
 trait UsersT[M[_]] {
 

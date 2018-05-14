@@ -5,7 +5,8 @@ import cats.implicits._
 
 object Program {
 
-  def program[M[_] : Monad](usersT: UsersT[M],tweetsT: TweetsT[M])(email:String):M[Tweet] =
+  def program[M[_] : Monad](usersT: UsersT[M],tweetsT: TweetsT[M])
+                           (email:String):M[Tweet] =
     for {
       userId <- usersT.userId(email)
       tweet <- tweetsT.tweet(userId)

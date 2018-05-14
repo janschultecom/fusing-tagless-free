@@ -6,6 +6,7 @@ import cats.implicits._
 
 object Main extends App {
 
+
   def interpreter(counterName:String) : KVStoreA ~> ErrorOr = loggingCompiler andThen metricsCompiler(counterName) andThen kvStoreCompiler
 
   val usersInterpreter: UsersInterpreter[ErrorOr] = new UsersInterpreter(interpreter("users"))
